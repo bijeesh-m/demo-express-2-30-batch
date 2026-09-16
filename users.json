@@ -1,0 +1,72 @@
+[
+    {
+        "id": 1,
+        "username": "john_doe",
+        "email": "john@example.com",
+        "password": "John@123",
+        "age": 25
+    },
+    {
+        "id": 2,
+        "username": "sarah_wilson",
+        "email": "sarah@example.com",
+        "password": "Sarah@456",
+        "age": 28
+    },
+    {
+        "id": 3,
+        "username": "michael_smith",
+        "email": "michael@example.com",
+        "password": "Michael@789",
+        "age": 32
+    },
+    {
+        "id": 4,
+        "username": "emily_jones",
+        "email": "emily@example.com",
+        "password": "Emily@123",
+        "age": 24
+    },
+    {
+        "id": 5,
+        "username": "david_brown",
+        "email": "david@example.com",
+        "password": "David@456",
+        "age": 30
+    },
+    {
+        "id": 6,
+        "username": "olivia_davis",
+        "email": "olivia@example.com",
+        "password": "Olivia@789",
+        "age": 27
+    },
+    {
+        "id": 7,
+        "username": "james_miller",
+        "email": "james@example.com",
+        "password": "James@123",
+        "age": 35
+    },
+    {
+        "id": 8,
+        "username": "sophia_moore",
+        "email": "sophia@example.com",
+        "password": "Sophia@456",
+        "age": 22
+    },
+    {
+        "id": 9,
+        "username": "daniel_taylor",
+        "email": "daniel@example.com",
+        "password": "Daniel@789",
+        "age": 29
+    },
+    {
+        "id": 10,
+        "username": "emma_anderson",
+        "email": "emma@example.com",
+        "password": "Emma@123",
+        "age": 26
+    }
+]
