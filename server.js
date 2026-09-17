@@ -5,6 +5,7 @@ const userRoutes = require("./routes/userRoutes")
 const studentRoutes = require("./routes/studentRoutes")
 const courseRoutes = require("./routes/courseRoutes")
 const authRoutes = require("./routes/authRoutes")
+const cookieParser = require("cookie-parser")
 const app = express();
 
 require("dotenv").config()
@@ -24,8 +25,10 @@ connectDB();
 
 
 app.use(express.json())
+app.use(cookieParser())
+
 app.use(userRoutes)
-app.use("/auth",authRoutes)
+app.use("/auth", authRoutes)
 app.use(studentRoutes)
 app.use(courseRoutes)
 

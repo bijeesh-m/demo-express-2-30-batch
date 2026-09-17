@@ -1,5 +1,5 @@
 const User = require("../models/user");
-
+const jwt = require("jsonwebtoken")
 
 
 module.exports.register = async (req, res) => {
@@ -22,7 +22,10 @@ module.exports.login = async (req, res) => {
         if (isUser) {
             const auth = await isUser.matchPassword(password)
             if (auth) {
+                const token = jwt.sign({ id: isUser._id }, process.env.JWT_SECRET_KEY, { expiresIn: "1hr" })
+                res.cookie("accessToken", token, { httpOnly: true, secure: false, sameSite: "lax", maxAge: 5 * 60 * 1000 })
                 res.status(200).json({ success: true, message: "Login success!" })
+
             } else {
                 res.status(401).json({ success: false, message: "Invalid password" })
             }
