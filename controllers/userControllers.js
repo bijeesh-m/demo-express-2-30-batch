@@ -1,9 +1,23 @@
 
-let users = require("../users.json")
 
+const User = require("../models/user")
 
-module.exports.getUsers = (req, res) => {
+module.exports.getUsers = async (req, res) => {
     try {
+
+        const { active, gender } = req.query
+        console.log(req.query);
+
+        const filter = {};
+
+        if (active) {
+            filter.active = active
+        }
+
+        if (gender) {
+            filter.gender = gender
+        }
+        const users = await User.find(filter);
         res.status(200).json({ success: true, data: users });
     } catch (error) {
         res.status(500).json({ success: false, error: error })

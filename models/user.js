@@ -10,7 +10,12 @@ const userSchema = new mongoose.Schema({
     age: Number,
     gender: String,
     active: Boolean,
-    mobile_no: String
+    mobile_no: String,
+    role:{
+        type:String,
+        enum:["user","admin"],
+        default:"user"
+    }
 });
 
 userSchema.pre("save", async function () {

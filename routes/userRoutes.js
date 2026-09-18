@@ -7,6 +7,7 @@ router.get("/users", getUsers)
 
 router.post("/users", createUser)
 
+
 router.delete("/users/:id", (req, res) => {
 
     const updatedUsers = users.filter((user) => user.id !== Number(req.params.id))
